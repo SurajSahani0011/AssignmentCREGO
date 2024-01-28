@@ -5,3 +5,18 @@
    
     
 }
+.exprssions{
+    margin-top: 30px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: rgb(154, 234, 219);
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
