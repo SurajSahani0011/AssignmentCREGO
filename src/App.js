@@ -48,8 +48,9 @@ const ExpressionEngine = () => {
           </Col>
         </Form.Group>
 
+        
         {expressions.map((expression, index) => (
-          <Row key={index}>
+          <Row key={index} className='exprssions'>
             <Col>
               <Form.Group controlId={`ruleType-${index}`}>
                 <Form.Label>Rule Type</Form.Label>
@@ -69,7 +70,7 @@ const ExpressionEngine = () => {
               <Form.Group controlId={`operator-${index}`}>
                 <Form.Label>Operator</Form.Label>
                 <Form.Control as="select" value={expression.operator} onChange={(e) => handleExpressionChange(index, 'operator', e.target.value)}>
-                  <option>></option>
+                  <option>{'>'}</option>
                   <option>{'<'}</option>
                   <option>≥</option>
                   <option>≤</option>
@@ -94,9 +95,11 @@ const ExpressionEngine = () => {
             </Col>
           </Row>
         ))}
-
+        <div className='buttons'>
         <Button variant="primary" onClick={handleAddExpression}>Add Expression</Button>
         <Button variant="primary" onClick={handleSumbitExpression}>Sumbit</Button>
+        </div>
+        
       </Form>
       
       
